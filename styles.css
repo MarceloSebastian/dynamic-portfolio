@@ -76,18 +76,31 @@ header .categories a.active {
 .grid {
     position: relative;
     width: 100%;
-    border: 1px solid red;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
+}
+
+.charged-images {
+    opacity: 1;
 }
 
 .grid .item {
-    position: absolute;
+    /* Importante el position */
+    position: absolute; 
     display: block;
     padding: 0;
     margin: 10px;
-    width: 33.33%;
+    width: calc(33.33% - 20px);
+}
+
+.grid .item-content {
+    /* Importante el position */
+    position: relative;
 }
 
 .grid .item img {
     width: 100%;
+    cursor: pointer;
+    vertical-align: top;
 }
 
